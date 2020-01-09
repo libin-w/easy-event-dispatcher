@@ -12,8 +12,11 @@ export default class EventDispatcher {
    * @param {*} name - 事件名称
    */
   verifyEventName(name) {
+    if (typeof name !== "string") {
+      throw Error("Invalid event");
+    }
     if (this.eventList.indexOf(name) === -1) {
-      throw Error('Invalid event');
+      throw Error("Invalid event");
     }
   }
   trigger(eventName) {
@@ -22,7 +25,7 @@ export default class EventDispatcher {
       ? this.eventSink[eventName]
       : [];
     callbackList.forEach(fun => {
-      typeof fun === 'function' && fun();
+      typeof fun === "function" && fun();
     });
   }
   /**
@@ -45,14 +48,14 @@ export default class EventDispatcher {
    */
   off(eventName, func) {
     this.verifyEventName(eventName);
-    if (typeof func === 'function') {
+    if (typeof func === "function") {
       const callbackList = this.eventSink[eventName];
       for (let i = callbackList.length - 1; i > -1; i--) {
         if (callbackList[i].name === func.name) {
           callbackList.splice(i, 1);
         }
       }
-    } else if (typeof func === 'undefined') {
+    } else if (typeof func === "undefined") {
       delete this.eventSink[eventName];
     }
   }
