@@ -2,7 +2,7 @@
   "name": "easy-event-dispatcher",
   "version": "1.0.0",
   "description": "事件分发器",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
