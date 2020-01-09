@@ -1,0 +1,22 @@
+{
+  "name": "easy-event-dispatcher",
+  "version": "1.0.0",
+  "description": "事件分发器",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libin-w/easy-event-dispatcher.git"
+  },
+  "keywords": [
+    "Event",
+    "事件分发",
+    "通信"
+  ],
+  "author": "WangLibin <libin_w@yeah.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libin-w/easy-event-dispatcher/issues"
+  },
+  "homepage": "https://github.com/libin-w/easy-event-dispatcher#readme"
+}
